@@ -1,0 +1,12 @@
+/* Global assets */
+@import "./global/global.css";
+/* Fonts */
+@import "./fonts.min.css";
+
+/* Header */
+@import "./global/header.css";
+
+/* Responsive */
+@import "./global/responsive.css";
+/* HERO */
+@import "./global/hero.css";
