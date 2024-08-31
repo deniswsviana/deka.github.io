@@ -2,6 +2,9 @@
   font-family: "BS";
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 /* margin padding 0 */
 html, body, ul, li{
   margin: 0;
@@ -17,6 +20,16 @@ a {
   text-decoration: none;
   transition: 0.5s;
 }
+a:active,
+a:focus {
+  /* color: var(--detail-colors); */
+  outline: none;
+  text-decoration: none;
+}
+p {
+  padding: 0;
+  margin: 0 0 30px 0;
+}
 /* Prelaoder */
 #preloader {
   position: fixed;
@@ -29,6 +42,9 @@ a {
   background: #fff url("../img/preloader.svg") no-repeat center center;
 }
 /* Sections Common */
+section {
+  overflow: hidden;
+}
 @media screen and (max-width: 600px) {
   .section-title {
     font-size: 0.75rem;

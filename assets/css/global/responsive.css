@@ -3,8 +3,10 @@
 @media only screen and (min-width: 1200px) {
     .container {
       max-width: 1170px;
-      margin: 0 auto;
     }
+  }
+  .header__menu ul li {
+    margin-right: 40px;
   }
   
   /* Medium Device = 1200px */
@@ -14,7 +16,7 @@
       font-size: 26px;
     }
     .header__menu ul li {
-      margin-right: 38px;
+      margin-right: 1.875rem;
     }
     .hero__slider.owl-carousel .owl-nav button {
       left: 2px;

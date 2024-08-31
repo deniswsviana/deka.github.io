@@ -1,5 +1,9 @@
 /* Global assets */
 @import "./global/global.css";
+@import "./global/container.css";
+@import "./global/details.css";
+/* Components */
+@import "./components/hover.css";
 /* Fonts */
 @import "./fonts.min.css";
 
