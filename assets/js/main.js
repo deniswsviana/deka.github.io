@@ -1,4 +1,23 @@
-  
+// header active
+const headerActive = document.querySelectorAll(".header__menu_items li a");
+function activeHeader(active) {
+  const href = active.href;
+  const url = location.href;
+
+  if (href.includes(url)) {
+    active.classList.toggle("active");
+    
+  }
+}
+headerActive.forEach(activeHeader);
+
+  /**
+   * Easy on scroll event listener
+   */
+  const onscroll = (el, listener) => {
+    el.addEventListener("scroll", listener);
+  };
+
   
   /**
    * Scrolls to an element with header offset
@@ -13,22 +32,26 @@
       behavior: "smooth",
     });
   };
-    /**
-   * Header fixed top on scroll
-   */
-    let selectHeader = select("#header");
-    if (selectHeader) {
-      let headerOffset = selectHeader.offsetTop;
-      let nextElement = selectHeader.nextElementSibling;
-      const headerFixed = () => {
-        if (headerOffset - window.scrollY <= 0) {
-          selectHeader.classList.add("fixed-top");
-          nextElement.classList.add("scrolled-offset");
-        } else {
-          selectHeader.classList.remove("fixed-top");
-          nextElement.classList.remove("scrolled-offset");
-        }
-      };
-      window.addEventListener("load", headerFixed);
-      onscroll(document, headerFixed);
+
+/**
+ * Header fixed top on scroll
+ */
+const selectHeader = document.querySelectorAll("#header");
+if (selectHeader) {
+  let headerOffset = selectHeader.offsetTop;
+  let nextElement = selectHeader.nextElementSibling;
+
+  const headerFixed = () => {
+    if (headerOffset - window.scrollY <= 0) {
+      selectHeader.classList.add("fixed-top");
+      nextElement.classList.add("scrolled-offset");
     }
+  };
+  window.addEventListener("load", headerFixed);
+  onscroll(document, headerFixed);
+}
+
+// simple anime
+if(window.SimpleAnime){
+  new SimpleAnime();
+}

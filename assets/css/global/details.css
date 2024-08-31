@@ -1,8 +1,12 @@
 :root {
-    /* cor tema */
-    --cor__tema: #C2987C;
-    --cor__tema2: #C2B7B0;
+  /* cor tema */
+  --cor__tema: #c2987c;
+  --cor__tema2: #c2b7b0;
 
-    /* cor do texto */
-    --cor__texto: #ffffff;
+  /* cor do texto */
+  --cor__texto: #ffffff;
+}
+.hover.active {
+  color: var(--cor__tema);
+  transition: 0.4s;
 }
