@@ -1,0 +1,51 @@
+#footer {
+    
+}
+.footer__bg{
+    background-color: var(--cor__tema2);
+}
+.footer{
+    display: grid;
+    grid-template-columns: 3fr 5fr 4fr;
+    gap: 2.5rem;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    position: relative;
+}
+.footer li{
+    list-style: none;
+}
+.footer h3 {
+    margin-bottom: 32px;
+    color: #ffffff;
+
+}
+.footer__logo img{
+    margin: 30px;
+    height: 50px;
+    position: absolute;
+   
+}
+.footer__menu{
+    margin-left: 40px;
+}
+.footer__menu li{
+    margin-bottom: 16px;
+}
+.footer__contato {
+    display: grid;
+    
+}
+.footer__contato ul{
+    margin-bottom: 32px;
+}
+.footer__contato li{
+    margin-bottom: 16px;
+}
+.footer__contato a{
+    color: #ffffff;
+}
+.footer__form{
+    
+    
+}

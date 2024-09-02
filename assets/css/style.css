@@ -2,6 +2,8 @@
 @import "./global/global.css";
 @import "./global/container.css";
 @import "./global/details.css";
+/* utilities */
+@import "./utilities/plugin.css";
 /* Components */
 @import "./components/hover.css";
 /* Fonts */
@@ -14,3 +16,5 @@
 @import "./global/responsive.css";
 /* HERO */
 @import "./global/hero.css";
+/* footer */
+@import "./global/footer.css";

@@ -15,11 +15,12 @@ html {
 }
 body {
   font-family: "BS";
-  height: 5000px;
+ 
 }
 a {
   text-decoration: none;
   transition: 0.5s;
+  letter-spacing: 1px;
 }
 a:active,
 a:focus {
