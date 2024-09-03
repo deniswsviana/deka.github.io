@@ -6,7 +6,7 @@ html {
   scroll-behavior: smooth;
 }
 /* margin padding 0 */
-html, body, ul, li{
+html, body, ul, li, a, div{
   margin: 0;
   padding: 0;
 }

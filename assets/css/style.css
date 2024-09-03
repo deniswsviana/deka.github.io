@@ -6,6 +6,7 @@
 @import "./utilities/plugin.css";
 /* Components */
 @import "./components/hover.css";
+@import "./components/projects.css";
 /* Fonts */
 @import "./fonts.min.css";
 

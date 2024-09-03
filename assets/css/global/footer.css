@@ -12,6 +12,10 @@
     padding-bottom: 60px;
     position: relative;
 }
+.footer__redes{
+    padding-top: 40px;
+    color: #ffffff;
+}
 .footer li{
     list-style: none;
 }
