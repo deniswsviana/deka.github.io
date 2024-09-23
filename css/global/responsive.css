@@ -32,6 +32,9 @@
   .mobile-nav-toggle[aria-expanded="true"] {
     background-image: url("../../img/shared/icon-close.svg");
   }
+  #banner .banner_container{
+    width: 100%;
+  }
 }
 @media (min-width: 35em) and (max-width: 55em) {
   .header-menu-items a > span[aria-hidden] {
