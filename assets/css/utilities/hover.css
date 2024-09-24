@@ -1,0 +1,19 @@
+/* Header logo */
+.header .logo{
+  transform: translateX(0);
+  transition: transform .5s;
+
+}
+.header .logo:hover{
+  transform: translateX(0) scale(1.1);
+  transition: transform .3s ease-out;
+
+}
+/* Header menu */
+.header_menu_items a{
+  transition: .6s ease-out;
+}
+.header_menu_items a:hover{
+  transition: .3s ease-out;
+  color: #C29576;
+}

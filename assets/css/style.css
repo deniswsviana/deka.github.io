@@ -1,5 +1,6 @@
 /* components */
 @import "./components/banner_fix.css";
+@import "./components/fonts.css";
 /* global */
 @import "./global/header.css";
 @import "./global/footer.css";
@@ -12,6 +13,7 @@
 @import "./utilities/container.css";
 @import "./utilities/tipografia.css";
 @import "./utilities/colors.css";
+@import "./utilities/hover.css";
 /* home */
 @import "./home/sobre_nos.css";
 
