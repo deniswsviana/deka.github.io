@@ -16,6 +16,7 @@
 @import "./utilities/hover.css";
 /* home */
 @import "./home/sobre_nos.css";
+@import "./home/gallery.css";
 
 body{
     height: 2000px;

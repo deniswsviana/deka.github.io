@@ -1,18 +1,20 @@
 /* responsive header */
 @media (max-width: 35em) {
-  .header img{
+  .header img {
     width: min(30vw, 6.25rem);
   }
-.header_menu_items a{
-  color: #EDE5DE;
-}
-  .header_menu ul li{
-    margin-right: 40px;
+  .header_menu_items a {
+    color: #ede5de;
+  }
+  .header_menu ul li {
+    /* margin-right: 40px; */
+    align-self: center;
   }
   .header_menu_items {
+    z-index: 1;
     gap: 2em;
     position: fixed;
-    inset: 10% 0 0 30%;
+    inset: 0% 0 0 10%;
     height: 100%;
     flex-direction: column;
     padding: min(30vh, 10rem) 2em;
@@ -20,11 +22,12 @@
     backdrop-filter: blur(1rem);
     transform: translateX(100%);
     transition: transform 350ms ease-in-out;
-    /* color: #EDE5DE; */
   }
 
-
   .header_menu_items[data-visible="true"] {
+    body {
+      overflow: hidden;
+    }
     transform: translateX(0%);
   }
   /* menu-hamburguer */
@@ -37,7 +40,7 @@
     z-index: 99;
     width: 2rem;
     aspect-ratio: 1;
-    top: 2rem;
+    top: 1.5rem;
     right: 2rem;
     border: 0;
     cursor: pointer;
@@ -45,22 +48,61 @@
   .mobile_nav_toggle[aria-expanded="true"] {
     background-image: url(../../img/icon/close.svg);
   }
-  
-
+  /* persons */
+  #home .person_0_grid {
+    display: block;
+  }
+  #home .person_1_grid {
+    display: none;
+  }
+  #home .person_2_grid {
+    display: none;
+  }
 }
 @media (min-width: 35em) and (max-width: 55em) {
-  .header img{
+  .header img {
     width: min(30vw, 110px);
   }
   .header_menu_items a > span[aria-hidden] {
     display: none;
   }
+  /* persons */
+  #home .sobre_nos img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+  }
+  #home .person_1_text .tittle,
+  #home .person_2_text .tittle {
+    margin-bottom: 20px;
+  }
+  #home .person_1_text {
+    max-width: 300px;
+    line-height: 1rem;
+    left: 280px;
+    top: 20px;
+    bottom: 20px;
+    padding: 1.2rem;
+  }
+  #home .person_2_text {
+    max-width: 300px;
+    line-height: 1rem;
+    right: 280px;
+    top: 20px;
+    bottom: 20px;
+    padding: 1.2rem;
+  }
 }
 @media (min-width: 35em) {
-
   .header_menu_items {
-    gap: clamp(1.5rem, 5vw, 3rem);
+    /* gap: clamp(1rem, 5vw, 2rem); */
     padding-block: 2rem;
-    padding-inline: clamp(3rem, 10vw, 10rem);
+    /* padding-inline: clamp(3rem, 10vw, 10rem); */
+  }
+}
+@media (max-width: 620px) {
+  #home .person_1_text p,
+  #home .person_2_text p {
+    font-size: 14px;
   }
 }

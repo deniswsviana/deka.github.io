@@ -1,11 +1,11 @@
 /* Background Header */
 .header_bg {
-  background-color: var(--cor-00);
+  background: linear-gradient(#f5f3f26e, #ffffff, #f5f3f23f);
 }
 /* header img */
 .header img {
   width: 100%;
-  max-width: 8.75rem;
+  max-width: 10rem;
 }
 /* Header */
 .header {
@@ -13,7 +13,7 @@
   display: flex;
   gap: 1rem;
   justify-content: space-between;
-  padding: 2rem;
+  padding: 1.5rem;
   align-items: center;
   z-index: 999;
 }
@@ -21,16 +21,15 @@
   display: flex;
   gap: clamp(1rem, 3vw, 3rem);
   align-self: center;
-  /* text-transform: uppercase; */
+  text-transform: uppercase;
 }
-.header_menu_items a{
-  color: #735E4F;
+.header_menu_items a {
+  color: #735e4f;
 }
 .mobile_nav_toggle {
-    display: none;
-  }
+  display: none;
+}
 /* Header menu */
 .header_menu {
   align-items: center;
 }
-

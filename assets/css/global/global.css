@@ -9,12 +9,15 @@ img {
     display: block;
   }
   img[src$=".jpg"] {
-    /* border-radius: 4px; */
+    border-radius: 4px;
+  }
+    img[src$=".png"] {
+    border-radius: 4px;
   }
 /* BODY */
 body {
     margin: 0px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial Light, Helvetica, sans-serif;
     color: var(--cor-11);
     overflow: auto;
   }
