@@ -2,14 +2,16 @@
 #banner {
   display: table;
   width: 100%;
-  height: 80vh;
+  height: 90vh;
   margin-bottom: 8rem;
 }
 /* imagem banner */
 #banner.banner_fixed {
-  background: url("../../img/banner/banner.webp") center center;
+  background: url('../../img/banner/banner.webp') center center;
   background-size: cover;
   background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 /* banner color */
 #banner .banner_container {

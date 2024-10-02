@@ -23,8 +23,10 @@
 
 .gallery_column:hover > a:hover {
   transform: scale(1.15);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   z-index: 10;
+}
+.gallery_column:hover > a:hover img {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .gallery_column:hover > a:not(:hover) {
   opacity: 0.5;
