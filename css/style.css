@@ -1,23 +1,23 @@
 /* components */
-@import "./components/banner_fix.css";
-@import "./components/fonts.css";
+@import './components/banner_fix.css';
+@import './components/fonts.css';
 /* global */
-@import "./global/header.css";
-@import "./global/footer.css";
-@import "./global/global.css";
-@import "./global/reset.css";
-@import "./global/responsive.css";
+@import './global/header.css';
+@import './global/footer.css';
+@import './global/global.css';
+@import './global/reset.css';
+@import './global/responsive.css';
 /* utilities */
-@import "./utilities/animacao.css";
-@import "./utilities/botao.css";
-@import "./utilities/container.css";
-@import "./utilities/tipografia.css";
-@import "./utilities/colors.css";
-@import "./utilities/hover.css";
+@import './utilities/animacao.css';
+@import './utilities/botao.css';
+@import './utilities/container.css';
+@import './utilities/tipografia.css';
+@import './utilities/colors.css';
+@import './utilities/hover.css';
 /* home */
-@import "./home/sobre_nos.css";
-@import "./home/gallery.css";
+@import './home/sobre_nos.css';
+@import './home/gallery.css';
 
-body{
-    height: 2000px;
+body {
+  /* height: 2000px; */
 }
