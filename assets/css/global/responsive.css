@@ -24,7 +24,7 @@
     transition: transform 350ms ease-in-out;
   }
 
-  .header_menu_items[data-visible="true"] {
+  .header_menu_items[data-visible='true'] {
     body {
       overflow: hidden;
     }
@@ -45,7 +45,7 @@
     border: 0;
     cursor: pointer;
   }
-  .mobile_nav_toggle[aria-expanded="true"] {
+  .mobile_nav_toggle[aria-expanded='true'] {
     background-image: url(../../img/icon/close.svg);
   }
   /* persons */
@@ -57,6 +57,20 @@
   }
   #home .person_2_grid {
     display: none;
+  }
+  /* FOOTER */
+  #footer {
+    /* box-shadow: inset 0px 50px 0px 0px rgb(255, 255, 255); */
+  }
+  .mapa_footer {
+    display: none;
+  }
+  .footer_direitos {
+  }
+  .footer_content {
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
   }
 }
 @media (min-width: 35em) and (max-width: 55em) {
@@ -92,7 +106,11 @@
     bottom: 20px;
     padding: 1.2rem;
   }
+  .mapa_footer {
+    display: none;
+  }
 }
+
 @media (min-width: 35em) {
   .header_menu_items {
     /* gap: clamp(1rem, 5vw, 2rem); */

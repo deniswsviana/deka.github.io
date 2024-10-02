@@ -1,32 +1,33 @@
 /* border box */
 * {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
 /* IMAGEM */
 img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  img[src$=".jpg"] {
-    border-radius: 4px;
-  }
-    img[src$=".png"] {
-    border-radius: 4px;
-  }
+  width: 100%;
+  height: auto;
+  display: block;
+}
+img[src$='.jpg'] {
+  border-radius: 4px;
+}
+img[src$='.png'] {
+  border-radius: 4px;
+}
 /* BODY */
 body {
-    margin: 0px;
-    font-family: Arial Light, Helvetica, sans-serif;
-    color: var(--cor-11);
-    overflow: auto;
-  }
-  /* a, ul reset */
-  ul {
-    padding: 0px;
-    list-style: none;
-  }
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
+  margin: 0px;
+  font-family: Arial Light, Helvetica, sans-serif;
+  color: var(--cor-11);
+  overflow: auto;
+}
+/* a, ul reset */
+ul {
+  padding: 0px;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}

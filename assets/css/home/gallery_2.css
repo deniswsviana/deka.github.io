@@ -1,0 +1,21 @@
+#gallery {
+  /* aspect-ratio: 2; */
+  margin-bottom: 120px;
+
+
+}
+.gallery_row {
+  max-height: 800px;
+  aspect-ratio: 4/1;
+}
+.gallery_column {
+  aspect-ratio: 4/3;
+  max-height: 800px;
+  object-fit: cover;
+  columns: max(250px);
+  overflow: hidden;
+}
+.gallery_column img {
+  margin-bottom: 1em;
+  object-fit: cover;
+}

@@ -1,0 +1,113 @@
+#footer {
+  background-color: var(--cor-p1);
+  width: 100%;
+  padding: 20px;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+.footer::before {
+  display: block;
+  position: absolute;
+  content: '';
+  width: 50%;
+  align-items: center;
+  height: 4px;
+  border-radius: 4px;
+}
+.footer_content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  gap: clamp(40, 5vw, 18.75rem);
+}
+/* direito */
+.footer_direitos {
+  text-align: center;
+}
+/* MAP NAV */
+.mapa_footer {
+  display: block;
+  height: 100%;
+  width: 100px;
+  cursor: hidden;
+}
+.mapa_footer_items {
+  left: calc(5%);
+  position: absolute;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+.mapa_footer_items a {
+  /* display: none; */
+  bottom: -80px;
+  border-radius: 4px 4px 0 0;
+  /* position: absolute; */
+  padding: 40px 10px 35px 10px;
+  transition: all 0.3s ease-in;
+}
+.mapa_footer_items a:hover {
+  bottom: 0;
+}
+/* home map */
+.map_home {
+  background-color: var(--cor-p6);
+  position: relative;
+}
+.map_home::before {
+  content: url(../../img/footer/map/home.svg);
+  position: absolute;
+  top: -70px;
+  left: -8px;
+  padding: 20px;
+}
+/* sobre map */
+.map_sobre {
+  background-color: var(--cor-p6);
+  position: relative;
+}
+.map_sobre::before {
+  content: url(../../img/footer/map/info.svg);
+  position: absolute;
+  top: -70px;
+  left: 8px;
+  padding: 20px;
+}
+/* project map */
+.map_projetos {
+  background-color: var(--cor-p6);
+  position: relative;
+}
+.map_projetos::before {
+  content: url(../../img/footer/map/project.svg);
+  position: absolute;
+  top: -70px;
+  left: 2px;
+  padding: 20px;
+}
+/* contact map */
+.map_contatos {
+  background-color: var(--cor-p6);
+  position: relative;
+}
+.map_contatos::before {
+  content: url(../../img/footer/map/contact.svg);
+  position: absolute;
+  top: -70px;
+  left: 5px;
+  padding: 20px;
+}
+/* LOGO */
+.logo_redes {
+  display: flex;
+  gap: 1em;
+}
+.footer img {
+  width: 32px;
+}

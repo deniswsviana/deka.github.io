@@ -1,7 +1,7 @@
 /* sobre nos */
 #home .sobre_nos {
   display: grid;
-  margin-bottom: 120px;
+  margin-bottom: 160px;
 }
 
 /* title */
@@ -12,7 +12,7 @@
 }
 /* img */
 .sobre_nos img {
-  width: 400px;
+  max-width: 400px;
   height: 400px;
   object-fit: cover;
 }
@@ -74,6 +74,6 @@
 }
 #sobre_nos .tittle {
   margin-bottom: 40px;
-  font-family: "BS";
+  font-family: 'BS';
   letter-spacing: 2px;
 }
