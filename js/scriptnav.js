@@ -34,6 +34,7 @@ document.addEventListener('touchstart', (event) => {
     isMenuOpen = false; // Reseta o estado
     menuItems.setAttribute('data-visible', false);
     navToggle.setAttribute('aria-expanded', false);
+    document.body.classList.remove('no-scroll');
   }
 });
 
@@ -72,3 +73,4 @@ function scrollFunction() {
     button.classList.add('filter_svg');
   }
 }
+// ===============================================
