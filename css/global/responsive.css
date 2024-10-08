@@ -91,12 +91,17 @@
   .ur_pos {
     height: 40px;
   }
+  #home .persons {
+    gap: 0;
+  }
+  #home .sobre_nos h2 {
+    padding:10px 0px ;
+    font-size: 1rem;
+  }
 }
 
 @media (min-width: 35em) and (max-width: 55em) {
   .header_menu_items {
-    /* justify-content: center; */
-
     padding: 100px 20px;
   }
   .header img {
@@ -116,10 +121,10 @@
     margin-bottom: 20px;
   }
   #home .person_1_text {
-    max-width: 300px;
+    max-width: 400px;
     line-height: 1rem;
-    left: 280px;
-    top: 20px;
+    left: 300px;
+    top: 10px;
     bottom: 20px;
     padding: 1.2rem;
   }
@@ -134,9 +139,27 @@
   .mapa_footer {
     display: none;
   }
+  #home .sobre_nos h2 {
+    position: absolute;
+    left: 300px;
+    font-size: 14px;
+    padding: 0 24px;
+  }
+  #home .person_1_text .tittle {
+    font-size: 1.3rem;
+    line-height: 1em;
+    /* text-align: center; */
+  }
 }
 
 @media (min-width: 35em) {
+  .sobre_nos h2 {
+    position: absolute;
+    z-index: 9;
+    /* right: 5%; */
+    left: 500px;
+  }
+
   .header_menu_items {
     /* gap: clamp(1rem, 5vw, 2rem); */
     /* padding-block: 2rem; */

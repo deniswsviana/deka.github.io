@@ -1,20 +1,21 @@
 /* sobre nos */
 #home .sobre_nos {
   display: grid;
-  margin-bottom: 160px;
+  margin-bottom: 8rem;
   color: #735e4f;
 }
 
 /* title */
-#home .sobre_nos h2 {
-  margin-bottom: 80px;
-  justify-self: center;
-  font-size: 3rem;
+.sobre_nos h2 {
+  padding: 0 32px;
+  font-size: 1.3rem;
+  font-family: 'Arial light';
+  
 }
 /* img */
 .sobre_nos img {
-  max-width: 400px;
-  height: 400px;
+  max-width: 500px;
+  /* height: 400px; */
   object-fit: cover;
 }
 /* persons */
@@ -22,7 +23,9 @@
   display: flex;
   flex-direction: column;
   gap: clamp(5rem, 3vw, 3rem);
+  position: relative;
 }
+/* persons mobile */
 .person_0_grid {
   display: none;
 }
@@ -38,19 +41,23 @@
   padding: 1rem;
   line-height: 1.5rem;
 }
+/* persons 1 */
 .person_1_grid {
   display: flex;
   position: relative;
 }
-.person_1 {
+.person_1_text .tittle{
+  font-size: 2rem;
+  line-height: 1em;
+  /* text-align: center; */
 }
 .person_1_text {
   position: absolute;
   max-width: 500px;
-  background-color: var(--cor-p1);
+  /* background-color: var(--cor-p1); */
   padding: 2rem;
-  top: 50px;
-  left: 360px;
+  top: 20px;
+  left: 500px;
   border-radius: 4px;
   line-height: 1.5rem;
 }
