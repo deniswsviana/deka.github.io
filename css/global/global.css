@@ -22,6 +22,11 @@ body {
   color: var(--cor-11);
   overflow: auto;
 }
+body.no-scroll {
+  overflow: hidden; /* Bloqueia o scroll */
+  height: 100%; /* Garante que o body ocupe a altura total */
+}
+
 /* a, ul reset */
 ul {
   padding: 0px;

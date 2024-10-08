@@ -24,6 +24,9 @@
     justify-content: center;
     gap: 20px;
   }
+  #banner.banner_fixed {
+    background-attachment: scroll;
+  }
 }
 @media (max-width: 55em) {
   /* GALLERY */

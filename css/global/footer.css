@@ -64,7 +64,7 @@
   content: url(../../img/footer/map/home.svg);
   position: absolute;
   top: -70px;
-  left: -8px;
+  left: -0px;
   padding: 20px;
 }
 /* sobre map */
@@ -76,7 +76,7 @@
   content: url(../../img/footer/map/info.svg);
   position: absolute;
   top: -70px;
-  left: 8px;
+  left: 16px;
   padding: 20px;
 }
 /* project map */
@@ -88,7 +88,7 @@
   content: url(../../img/footer/map/project.svg);
   position: absolute;
   top: -70px;
-  left: 2px;
+  left: 10px;
   padding: 20px;
 }
 /* contact map */
@@ -100,14 +100,14 @@
   content: url(../../img/footer/map/contact.svg);
   position: absolute;
   top: -70px;
-  left: 5px;
+  left: 10px;
   padding: 20px;
 }
 /* LOGO */
 .logo_redes {
   display: flex;
-  gap: 1em;
+  gap: 2em;
 }
 .footer img {
-  width: 32px;
+  width: 24px;
 }
