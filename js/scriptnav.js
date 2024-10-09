@@ -27,7 +27,7 @@ navToggle.addEventListener('click', (event) => {
 });
 
 // Close tab when clicking outside
-document.addEventListener('touchstart', (event) => {
+document.addEventListener('click', (event) => {
   const isClickInside =
     menuItems.contains(event.target) || navToggle.contains(event.target);
   if (!isClickInside) {

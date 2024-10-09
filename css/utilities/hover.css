@@ -1,19 +1,17 @@
 /* Header logo */
-.header .logo{
+.header .logo {
   transform: translateX(0);
-  transition: transform .5s;
-
+  transition: transform 0.5s;
 }
-.header .logo:hover{
+.header .logo:hover {
   transform: translateX(0) scale(1.1);
-  transition: transform .3s ease-out;
-
+  transition: transform 0.3s ease-out;
 }
 /* Header menu */
-.header_menu_items a{
-  transition: .6s ease-out;
+.header_menu_items a {
+  transition: 0.6s ease-out;
 }
-.header_menu_items a:hover{
-  transition: .3s ease-out;
-  color: #C29576;
+.header_menu_items a:hover {
+  transition: 0.3s ease-out;
+  color: #c29576;
 }
