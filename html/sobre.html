@@ -4,52 +4,210 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
+    <meta
+      name="description"
+      content="Abitare - Conheça nossa história e trajetória na arquitetura e design de interiores"
+    />
+    <meta
+      name="keywords"
+      content="arquitetura, design de interiores, sobre nós, história, trajetória"
+    />
     <!-- Favicons -->
-    <link href="../img/favicon/favicon_io/favicon-32x32.png" rel="icon" />
+    <link
+      href="../img/favicon/favicon_io/favicon-32x32.png"
+      rel="icon"
+      type="image/png"
+    />
     <link
       href="../img/favicon/favicon_io/android-chrome-192x192.png"
       rel="apple-touch-icon"
     />
-    <!-- Link CSS -->
+    <!-- Preload critical resources -->
+    <link rel="preload" href="../css/style.css" as="style" />
+    <link rel="preload" href="../js/scriptnav.js" as="script" />
+    <!-- CSS -->
     <link rel="stylesheet" href="../css/style.css" />
-    <!-- Link JS -->
-    <script src="../js/scriptnav.js" defer></script>
-    <!-- <script src="../js/scriptfont.js" defer></script> -->
-    <!-- Tittle -->
-    <title>Abitare</title>
+    <!-- Title -->
+    <title>Sobre Nós - Abitare Arquitetura</title>
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://www.instagram.com" />
+    <link rel="preconnect" href="https://www.pinterest.com" />
+    <style>
+      /* Estilos específicos para a página Sobre */
+      .sobre-hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url('../img/sobre/sobre-hero.jpg') no-repeat center center;
+        background-size: cover;
+        height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+      }
+
+      .sobre-content {
+        padding: 80px 0;
+      }
+
+      .sobre-historia {
+        margin-bottom: 60px;
+      }
+
+      .equipe-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 40px;
+        margin-top: 60px;
+      }
+
+      .membro-equipe {
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .membro-equipe:hover {
+        transform: translateY(-10px);
+      }
+
+      .membro-img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+      }
+
+      .membro-info {
+        padding: 30px;
+      }
+
+      .membro-nome {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        color: #333;
+      }
+
+      .membro-cargo {
+        color: #777;
+        margin-bottom: 20px;
+      }
+
+      .membro-desc {
+        margin-bottom: 20px;
+        color: #555;
+      }
+
+      .trajetoria-btn {
+        background: none;
+        border: none;
+        color: #8b5fbf;
+        font-weight: bold;
+        cursor: pointer;
+        padding: 0;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+      }
+
+      .trajetoria-btn i {
+        margin-left: 5px;
+        transition: transform 0.3s ease;
+      }
+
+      .trajetoria-btn.active i {
+        transform: rotate(180deg);
+      }
+
+      .trajetoria-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+        color: #555;
+      }
+
+      .trajetoria-content.active {
+        max-height: 1000px;
+        margin-top: 15px;
+      }
+
+      .valores-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        margin-top: 60px;
+      }
+
+      .valor-card {
+        background: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      .valor-icon {
+        font-size: 2.5rem;
+        color: #8b5fbf;
+        margin-bottom: 20px;
+      }
+
+      .valor-titulo {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+        color: #333;
+      }
+
+      .valor-desc {
+        color: #555;
+      }
+
+      @media (max-width: 768px) {
+        .sobre-hero {
+          height: 40vh;
+        }
+
+        .equipe-container {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
   </head>
 
-  <body id="">
+  <body id="sobre">
     <!-- HEADER -->
     <header id="header" class="header_bg">
       <div class="header">
         <div class="box">
           <div class="ur_pos container">
-            <a class="logo" href="./index.html">
+            <a class="logo" href="../index.html" aria-label="Página inicial">
               <img
                 class="filter_svg"
                 src="../img/logo/LOGO-ABITARE-SVG.svg"
-                alt=""
+                alt="Logo Abitare"
+                width="150"
+                height="40"
+                loading="lazy"
               />
             </a>
             <button
               class="mobile_nav_toggle"
               aria-controls="header_menu_items"
               aria-expanded="false"
+              aria-label="Menu mobile"
             >
-              <span class="sr-only"></span>
+              <span class="sr-only">Menu</span>
             </button>
-            <nav class="header_menu" aria-label="primaria">
+            <nav class="header_menu" aria-label="Navegação principal">
               <ul
                 class="header_menu_items color_a font-1-m"
                 data-visible="false"
               >
-                <li class="active home">
+                <li class="home">
                   <a href="../index.html" class="hover">Home</a>
                 </li>
-                <li class="sobre">
+                <li class="sobre active">
                   <a href="./sobre.html" class="hover">Sobre Nós</a>
                 </li>
                 <li class="projetos">
@@ -64,60 +222,333 @@
         </div>
       </div>
     </header>
+
     <!-- BANNER -->
-    <div id="banner" class="banner_fixed">
-      <div class="banner_container"></div>
+    <div class="sobre-hero">
+      <div class="container">
+        <h1 class="font-1-xxl cor-0">Nossa História</h1>
+        <p class="font-2-l cor-3">
+          Transformando sonhos em espaços que inspiram
+        </p>
+      </div>
     </div>
-    <main id="content" class="container"></main>
+
+    <!-- MAIN CONTENT -->
+    <main id="content" class="container">
+      <section class="sobre-content">
+        <div class="sobre-historia">
+          <h2 class="font-1-xl cor-11">A Abitare</h2>
+          <div class="font-2-m cor-9 sobre-texto">
+            <p>
+              Fundada em 2015 por Ana Beatriz e Camila Fernandes, a Abitare
+              nasceu da paixão compartilhada por criar espaços que vão além da
+              estética, mas que contam histórias e refletem a essência de quem
+              os habita.
+            </p>
+
+            <p>
+              Nossa jornada começou em uma pequena sala no centro de São Paulo,
+              com apenas dois computadores e muitas ideias. Hoje, temos um
+              escritório completo e uma equipe dedicada, mas mantemos o mesmo
+              espírito criativo e atenção aos detalhes que nos guiou desde o
+              início.
+            </p>
+
+            <p>
+              Acreditamos que a arquitetura deve ser acessível, humana e
+              transformadora. Cada projeto é uma oportunidade de criar algo
+              único, que equilibra beleza, funcionalidade e personalidade.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="font-1-xl cor-11">Nossa Equipe</h2>
+        <div class="equipe-container">
+          <!-- Membro 1 -->
+          <div class="membro-equipe">
+            <img
+              src="../img/sobre/ana-beatriz.jpg"
+              alt="Ana Beatriz"
+              class="membro-img"
+              loading="lazy"
+            />
+            <div class="membro-info">
+              <h3 class="font-1-l-b cor-11 membro-nome">Ana Beatriz</h3>
+              <p class="font-2-m cor-8 membro-cargo">
+                Arquiteta e Sócia-fundadora
+              </p>
+              <p class="font-2-s cor-9 membro-desc">
+                Especialista em design de interiores, com pós-graduação em
+                Iluminação e Design de Ambientes. Apaixonada por criar espaços
+                que equilibram beleza e funcionalidade.
+              </p>
+
+              <button
+                class="trajetoria-btn font-1-m-b cor-p1"
+                onclick="toggleTrajetoria(this)"
+              >
+                Trajetória <i class="fas fa-chevron-down"></i>
+              </button>
+
+              <div class="trajetoria-content font-2-s cor-9">
+                <p>
+                  <strong>Formação:</strong> Graduada em Arquitetura e Urbanismo
+                  pela FAU-USP (2010-2015)
+                </p>
+                <p><strong>Experiência:</strong></p>
+                <ul>
+                  <li>Estagiária no escritório Marcio Kogan (2014-2015)</li>
+                  <li>Arquiteta júnior na FGMF Arquitetos (2015-2017)</li>
+                  <li>
+                    Especialização em Design de Interiores na Poli-USP
+                    (2016-2017)
+                  </li>
+                  <li>Co-fundadora da Abitare (2017-presente)</li>
+                </ul>
+                <p><strong>Prêmios:</strong></p>
+                <ul>
+                  <li>Prêmio Casa Cor - Melhor Espaço Residencial (2019)</li>
+                  <li>
+                    Seleção ArchDaily - Melhores Escritórios Emergentes (2020)
+                  </li>
+                </ul>
+              </div>
+
+              <div class="membro-redes">
+                <a href="#" class="font-2-m cor-5"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="#" class="font-2-m cor-5"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Membro 2 -->
+          <div class="membro-equipe">
+            <img
+              src="../img/sobre/camila-fernandes.jpg"
+              alt="Camila Fernandes"
+              class="membro-img"
+              loading="lazy"
+            />
+            <div class="membro-info">
+              <h3 class="font-1-l-b cor-11 membro-nome">Camila Fernandes</h3>
+              <p class="font-2-m cor-8 membro-cargo">
+                Arquiteta e Sócia-fundadora
+              </p>
+              <p class="font-2-s cor-9 membro-desc">
+                Especialista em projetos residenciais e sustentabilidade, com
+                mestrado em Arquitetura Sustentável. Acredita que bons projetos
+                devem dialogar com o meio ambiente.
+              </p>
+
+              <button
+                class="trajetoria-btn font-1-m-b cor-p1"
+                onclick="toggleTrajetoria(this)"
+              >
+                Trajetória <i class="fas fa-chevron-down"></i>
+              </button>
+
+              <div class="trajetoria-content font-2-s cor-9">
+                <p>
+                  <strong>Formação:</strong> Graduada em Arquitetura e Urbanismo
+                  pela FAU-USP (2010-2015)
+                </p>
+                <p><strong>Experiência:</strong></p>
+                <ul>
+                  <li>
+                    Estagiária no escritório Brasil Arquitetura (2013-2015)
+                  </li>
+                  <li>Arquiteta na Triptyque Architecture (2015-2017)</li>
+                  <li>
+                    Mestrado em Arquitetura Sustentável na USP (2016-2018)
+                  </li>
+                  <li>Co-fundadora da Abitare (2017-presente)</li>
+                </ul>
+                <p><strong>Prêmios:</strong></p>
+                <ul>
+                  <li>Prêmio AsBEA - Projeto Sustentável (2018)</li>
+                  <li>Seleção ArchDaily - Melhores Casas do Ano (2021)</li>
+                </ul>
+              </div>
+
+              <div class="membro-redes">
+                <a href="#" class="font-2-m cor-5"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="#" class="font-2-m cor-5"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="font-1-xl cor-11" style="margin-top: 80px">
+          Nossos Valores
+        </h2>
+        <div class="valores-container">
+          <div class="valor-card">
+            <div class="valor-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+            <h3 class="font-1-m-b cor-11 valor-titulo">Paixão pelo Design</h3>
+            <p class="font-2-s cor-9 valor-desc">
+              Acreditamos que a arquitetura deve emocionar. Cada projeto é uma
+              oportunidade de criar algo único e significativo.
+            </p>
+          </div>
+
+          <div class="valor-card">
+            <div class="valor-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3 class="font-1-m-b cor-11 valor-titulo">Foco no Cliente</h3>
+            <p class="font-2-s cor-9 valor-desc">
+              Nosso processo é colaborativo. Ouvimos atentamente para entender
+              necessidades e transformá-las em soluções criativas.
+            </p>
+          </div>
+
+          <div class="valor-card">
+            <div class="valor-icon">
+              <i class="fas fa-leaf"></i>
+            </div>
+            <h3 class="font-1-m-b cor-11 valor-titulo">Sustentabilidade</h3>
+            <p class="font-2-s cor-9 valor-desc">
+              Buscamos sempre soluções ecoeficientes, utilizando materiais
+              sustentáveis e estratégias bioclimáticas.
+            </p>
+          </div>
+
+          <div class="valor-card">
+            <div class="valor-icon">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <h3 class="font-1-m-b cor-11 valor-titulo">Inovação</h3>
+            <p class="font-2-s cor-9 valor-desc">
+              Estamos sempre pesquisando novas técnicas, materiais e tecnologias
+              para oferecer o melhor em cada projeto.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
     <footer id="footer" class="footer">
       <div class="footer_content container">
         <div class="mapa_footer">
           <ul class="mapa_footer_items" data-visible="false">
-            <li class="active home">
-              <a href="#header" class="map_home hover">Home</a>
+            <li class="home">
+              <a href="../index.html" class="map_home hover">Home</a>
             </li>
-            <li class="sobre">
-              <a href="./html/sobre.html" class="map_sobre hover">Sobre Nós</a>
+            <li class="sobre active">
+              <a href="./sobre.html" class="map_sobre hover">Sobre Nós</a>
             </li>
             <li class="projetos">
-              <a href="./html/projetos.html" class="map_projetos hover">Projetos</a>
+              <a href="./projetos.html" class="map_projetos hover">Projetos</a>
             </li>
             <li class="contatos">
-              <a href="./html/contatos.html" class="map_contatos hover">Contatos</a>
+              <a href="./contatos.html" class="map_contatos hover">Contatos</a>
             </li>
           </ul>
         </div>
 
         <div>
           <p class="footer_direitos font-2-m cor-p6">
-            Abitare © Todos os direitos reservados.
+            Abitare © <span id="current-year">2023</span> Todos os direitos
+            reservados.
           </p>
         </div>
         <div class="logo_redes">
-          <!-- Link para o Instagram -->
           <a
             href="https://www.instagram.com/abitare.arq"
             target="_blank"
+            rel="noopener noreferrer"
             aria-label="Instagram"
           >
-            <img src="./img/footer/redes/instagram.svg" alt="" />
+            <img
+              src="../img/footer/redes/instagram.svg"
+              alt="Instagram"
+              width="24"
+              height="24"
+              loading="lazy"
+            />
           </a>
-          <!-- Link para o Pinterest -->
           <a
             href="https://www.pinterest.com/abitarearq"
             target="_blank"
+            rel="noopener noreferrer"
             aria-label="Pinterest"
           >
-            <img src="./img/footer/redes/pinterest.svg" alt="" />
+            <img
+              src="../img/footer/redes/pinterest.svg"
+              alt="Pinterest"
+              width="24"
+              height="24"
+              loading="lazy"
+            />
           </a>
           <a
             href="https://wa.me/5511984073541?text=Olá,%20gostaria%20de%20mais%20informações!"
             target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp"
           >
-            <img src="./img/footer/redes/whatsapp.svg" alt="" />
+            <img
+              src="../img/footer/redes/whatsapp.svg"
+              alt="WhatsApp"
+              width="24"
+              height="24"
+              loading="lazy"
+            />
           </a>
         </div>
       </div>
     </footer>
+
+    <!-- SCRIPTS -->
+    <script src="../js/scriptnav.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      // Current year for footer
+      document.getElementById('current-year').textContent =
+        new Date().getFullYear();
+
+      // Lazy loading for images
+      if ('loading' in HTMLImageElement.prototype) {
+        const images = document.querySelectorAll('img[loading="lazy"]');
+        images.forEach((img) => {
+          img.loading = 'lazy';
+        });
+      }
+
+      // Toggle trajetória
+      function toggleTrajetoria(button) {
+        const content = button.nextElementSibling;
+        button.classList.toggle('active');
+        content.classList.toggle('active');
+      }
+
+      // Service worker registration for PWA
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker
+            .register('/sw.js')
+            .then((registration) => {
+              console.log('ServiceWorker registration successful');
+            })
+            .catch((err) => {
+              console.log('ServiceWorker registration failed: ', err);
+            });
+        });
+      }
+    </script>
   </body>
 </html>

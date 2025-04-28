@@ -14,13 +14,13 @@
   object-fit: cover;
 }
 
-.gallery_column a {
+/* .gallery_column a {
   flex: 1 1 max(16.5625rem);
   transition: all 150ms ease-in-out;
   position: relative;
   transform: scale(1);
-}
-
+} */
+/* 
 .gallery_column:hover > a:hover {
   transform: scale(1.15);
   z-index: 10;
@@ -30,4 +30,75 @@
 }
 .gallery_column:hover > a:not(:hover) {
   opacity: 0.5;
+} */
+
+/* Estilos para a galeria expansiva */
+.gallery_row {
+  width: 100%;
+  overflow: hidden;
+}
+
+.gallery_column {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 15px;
+}
+
+.gallery_column a {
+  flex: 1 1 300px;
+  max-height: 400px;
+
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.gallery_column img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  display: block;
+}
+
+.gallery_column a:hover {
+  flex: 1 1 500px;
+  z-index: 10;
+}
+
+.gallery_column a:hover img {
+  transform: scale(1.05);
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Efeito de overlay */
+.gallery_column a::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery_column a:hover::after {
+  opacity: 1;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .gallery_column a {
+    flex: 1 1 100%;
+  }
+
+  .gallery_column a:hover {
+    flex: 1 1 100%;
+  }
 }

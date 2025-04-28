@@ -2,23 +2,35 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <!-- Favicons -->
-    <link href="./img/favicon/favicon_io/favicon-32x32.png" rel="icon" />
-    <link
-      href="./img/favicon/favicon_io/android-chrome-192x192.png"
-      rel="apple-touch-icon"
+    <meta
+      name="description"
+      content="Abitare - Arquitetura e Design de Interiores"
     />
-    <!-- Link CSS -->
+    <meta
+      name="keywords"
+      content="arquitetura, design de interiores, projetos residenciais, decoração"
+    />
+    <!-- Favicons (optimized) -->
+    <link
+      rel="icon"
+      href="./img/favicon/favicon_io/favicon-32x32.png"
+      type="image/png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="./img/favicon/favicon_io/android-chrome-192x192.png"
+    />
+    <!-- Preload critical resources -->
+    <link rel="preload" href="./css/style.css" as="style" />
+    <link rel="preload" href="./js/scriptnav.js" as="script" />
+    <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css" />
-    <!-- Link JS -->
-    <script src="./js/scriptnav.js" defer></script>
-    <!-- <script src="../js/scriptfont.js" defer></script> -->
-    <!-- Tittle -->
-    <title>Abitare</title>
+    <!-- Title -->
+    <title>Abitare - Arquitetura e Design</title>
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://www.instagram.com" />
+    <link rel="preconnect" href="https://www.pinterest.com" />
   </head>
 
   <body id="home">
@@ -27,20 +39,25 @@
       <div class="header">
         <div class="box">
           <div class="ur_pos container">
-            <a class="logo" href="./index.html"
-              ><img
+            <a class="logo" href="./index.html" aria-label="Página inicial">
+              <img
                 class="filter_svg"
                 src="./img/logo/LOGO-ABITARE-SVG.svg"
-                alt=""
-            /></a>
+                alt="Logo Abitare"
+                width="150"
+                height="40"
+                loading="lazy"
+              />
+            </a>
             <button
               class="mobile_nav_toggle filter_svg"
               aria-controls="header_menu_items"
               aria-expanded="false"
+              aria-label="Menu mobile"
             >
-              <span class="sr-only"></span>
+              <span class="sr-only">Menu</span>
             </button>
-            <nav class="header_menu" aria-label="primaria">
+            <nav class="header_menu" aria-label="Navegação principal">
               <ul
                 class="header_menu_items color_a font-1-m"
                 data-visible="false"
@@ -63,23 +80,35 @@
         </div>
       </div>
     </header>
+
     <!-- BANNER -->
     <div id="banner" class="banner_fixed">
-      <div class="banner_container"></div>
+      <div
+        class="banner_container"
+        role="img"
+        aria-label="Banner principal"
+      ></div>
     </div>
+
+    <!-- MAIN CONTENT -->
     <main id="content" class="container">
-      <section id="sobre_nos" class="sobre_nos">
+      <!-- ABOUT SECTION -->
+      <section id="sobre_nos" class="sobre_nos" aria-labelledby="sobre-title">
+        <h2 id="sobre-title" class="title">Sobre Nós</h2>
         <div class="persons">
-          <h2 class="title">Sobre Nós</h2>
           <div class="person_0_grid">
             <div class="person_0">
-              <img src="./img/perfil/cinthia e deka perfil.webp" alt="" />
+              <img
+                src="./img/perfil/cinthia e deka perfil.webp"
+                alt="Cinthia David e Andressa Rodrigues"
+                width="400"
+                height="400"
+                loading="lazy"
+              />
             </div>
             <div class="person_0_text">
               <h3 class="tittle">
-                Cinthia David<br />
-                & <br />
-                Andressa Rodrigues
+                Cinthia David<br />&<br />Andressa Rodrigues
               </h3>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -92,13 +121,17 @@
           </div>
           <div class="person_1_grid">
             <div class="person_1">
-              <img src="./img/perfil/cinthia e deka perfil.webp" alt="" />
+              <img
+                src="./img/perfil/cinthia e deka perfil.webp"
+                alt="Cinthia David e Andressa Rodrigues"
+                width="400"
+                height="400"
+                loading="lazy"
+              />
             </div>
             <div class="person_1_text">
               <h3 class="tittle">
-                Cinthia David<br />
-                & <br />
-                Andressa Rodrigues
+                Cinthia David<br />&<br />Andressa Rodrigues
               </h3>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -109,52 +142,92 @@
               </p>
             </div>
           </div>
-          <!-- <div class="person_2_grid">
-            <div class="person_2_text">
-              <h3 class="tittle">Andressa Rodrigues</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Mollitia, aut. Saepe, aliquam. Officiis impedit architecto
-                adipisci dolorum esse! Recusandae itaque nostrum eveniet eius,
-                aliquid dolorum quibusdam dolore excepturi. Suscipit,
-                reprehenderit.
-              </p>
-            </div>
-            <div class="person_2">
-              <img src="./img/perfil/cinthia e deka perfil.webp" alt="" />
-            </div>
-          </div> -->
         </div>
       </section>
-      <section id="gallery" class="gallery">
+
+      <!-- GALLERY SECTION -->
+      <section id="gallery" class="gallery" aria-labelledby="gallery-title">
+        <h2 id="gallery-title" class="sr-only">Galeria de Projetos</h2>
         <div class="gallery_row">
           <div class="gallery_column">
-            <a href="./">
-              <img src="./img/gallery/20231108_174046.webp" alt="" />
+            <a href="/html/projetos.html" aria-label="Projeto 1">
+              <img
+                src="./img/gallery/20231108_174046.webp"
+                alt="Projeto de arquitetura"
+                width="300"
+                height="400"
+                loading="lazy"
+              />
             </a>
-            <a href="">
-              <img src="./img/gallery/20240201_113121.webp" alt="" />
+            <a href="/html/projetos.html" aria-label="Projeto 2">
+              <img
+                src="./img/gallery/20240201_113121.webp"
+                alt="Projeto de arquitetura"
+                width="300"
+                height="400"
+                loading="lazy"
+              />
             </a>
-            <a href="">
-              <img src="./img/gallery/20240506_162907-ANIMATION.gif" alt="" />
+            <a href="/html/projetos.html" aria-label="Projeto 3">
+              <img
+                src="./img/gallery/20240506_162907-ANIMATION.gif"
+                alt="Projeto de arquitetura animado"
+                width="300"
+                height="400"
+                loading="lazy"
+              />
             </a>
-            <a href="">
-              <img src="./img/gallery/20240201_114944.webp" alt="" />
+            <a href="/html/projetos.html" aria-label="Projeto 4">
+              <img
+                src="./img/gallery/20240201_114944.webp"
+                alt="Projeto de arquitetura"
+                width="300"
+                height="400"
+                loading="lazy"
+              />
             </a>
-            <a href="">
-              <img src="./img/gallery/20240201_175919.webp" alt="" />
+            <a href="/html/projetos.html" aria-label="Projeto 5">
+              <img
+                src="./img/gallery/20240201_175919.webp"
+                alt="Projeto de arquitetura"
+                width="300"
+                height="400"
+                loading="lazy"
+              />
             </a>
-            <a href="">
-              <img src="./img/gallery/20240506_160625-ANIMATION.gif" alt="" />
+            <a href="/html/projetos.html" aria-label="Projeto 6">
+              <img
+                src="/img/gallery/20240506_160625-ANIMATION.gif"
+                alt="Projeto de arquitetura animado"
+                width="300"
+                height="400"
+                loading="lazy"
+              />
             </a>
-            <a href=""
-              ><img src="./img/gallery/20240506_170503.webp" alt="" />
+            <a href="/html/projetos.html" aria-label="Projeto 7">
+              <img
+                src="/img/gallery/20240506_170503.webp"
+                alt="Projeto de arquitetura"
+                width="300"
+                height="400"
+                loading="lazy"
+              />
             </a>
-            <a href=""> <img src="./img/gallery/Estante.webp" alt="" /></a>
+            <a href="/html/projetos.html" aria-label="Projeto 8">
+              <img
+                src="./img/gallery/Estante.webp"
+                alt="Projeto de arquitetura"
+                width="300"
+                height="400"
+                loading="lazy"
+              />
+            </a>
           </div>
         </div>
       </section>
     </main>
+
+    <!-- FOOTER -->
     <footer id="footer" class="footer">
       <div class="footer_content container">
         <div class="mapa_footer">
@@ -166,45 +239,99 @@
               <a href="./html/sobre.html" class="map_sobre hover">Sobre Nós</a>
             </li>
             <li class="projetos">
-              <a href="./html/projetos.html" class="map_projetos hover">Projetos</a>
+              <a href="./html/projetos.html" class="map_projetos hover"
+                >Projetos</a
+              >
             </li>
             <li class="contatos">
-              <a href="./html/contatos.html" class="map_contatos hover">Contatos</a>
+              <a href="./html/contatos.html" class="map_contatos hover"
+                >Contatos</a
+              >
             </li>
           </ul>
         </div>
 
         <div>
           <p class="footer_direitos font-2-m cor-p6">
-            Abitare © Todos os direitos reservados.
+            Abitare © <span id="current-year">2023</span> Todos os direitos
+            reservados.
           </p>
         </div>
         <div class="logo_redes">
-          <!-- Link para o Instagram -->
           <a
             href="https://www.instagram.com/abitare.arq"
             target="_blank"
+            rel="noopener noreferrer"
             aria-label="Instagram"
           >
-            <img src="./img/footer/redes/instagram.svg" alt="" />
+            <img
+              src="./img/footer/redes/instagram.svg"
+              alt="Instagram"
+              width="24"
+              height="24"
+              loading="lazy"
+            />
           </a>
-          <!-- Link para o Pinterest -->
           <a
             href="https://www.pinterest.com/abitarearq"
             target="_blank"
+            rel="noopener noreferrer"
             aria-label="Pinterest"
           >
-            <img src="./img/footer/redes/pinterest.svg" alt="" />
+            <img
+              src="./img/footer/redes/pinterest.svg"
+              alt="Pinterest"
+              width="24"
+              height="24"
+              loading="lazy"
+            />
           </a>
           <a
             href="https://wa.me/5511984073541?text=Olá,%20gostaria%20de%20mais%20informações!"
             target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp"
           >
-            <img src="./img/footer/redes/whatsapp.svg" alt="" />
+            <img
+              src="./img/footer/redes/whatsapp.svg"
+              alt="WhatsApp"
+              width="24"
+              height="24"
+              loading="lazy"
+            />
           </a>
         </div>
       </div>
     </footer>
+
+    <!-- SCRIPTS -->
+    <script src="./js/scriptnav.js" defer></script>
+    <script>
+      // Current year for footer
+      document.getElementById('current-year').textContent =
+        new Date().getFullYear();
+
+      // Lazy loading for images
+      if ('loading' in HTMLImageElement.prototype) {
+        const images = document.querySelectorAll('img[loading="lazy"]');
+        images.forEach((img) => {
+          img.loading = 'lazy';
+        });
+      }
+
+      // Service worker registration for PWA
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker
+            .register('/sw.js')
+            .then((registration) => {
+              console.log('ServiceWorker registration successful');
+            })
+            .catch((err) => {
+              console.log('ServiceWorker registration failed: ', err);
+            });
+        });
+      }
+    </script>
   </body>
-  <script></script>
 </html>

@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Abitare - Arquitetura e Design de Interiores"
+    />
+    <meta
+      name="keywords"
+      content="arquitetura, design de interiores, projetos residenciais, reformas, decoração"
+    />
+    <!-- Preload de recursos críticos -->
+    <link rel="preload" href="./css/style.css" as="style" />
+    <link rel="preload" href="./js/scriptnav.js" as="script" />
+    <!-- Favicons -->
+    <link
+      rel="icon"
+      href="./img/favicon/favicon_io/favicon-32x32.png"
+      type="image/png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="./img/favicon/favicon_io/android-chrome-192x192.png"
+    />
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <style>
+      /* CSS crítico - otimizado */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Layout básico para evitar CLS */
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      main {
+        flex: 1;
+      }
+
+      /* Otimizações de renderização */
+      .header,
+      .footer,
+      .gallery,
+      .sobre_nos {
+        will-change: transform;
+      }
+
+      /* Estilos da galeria - otimizados */
+      .gallery {
+        margin-bottom: 80px;
+      }
+
+      .gallery_row {
+        width: 100%;
+        overflow: hidden;
+      }
+
+      .gallery_column {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 15px;
+      }
+
+      .gallery_column a {
+        flex: 1 1 300px;
+        min-height: 250px;
+        max-height: 400px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        transform: translateZ(0);
+        will-change: transform;
+      }
+
+      .gallery_column img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.5s ease;
+      }
+
+      /* Media queries para galeria */
+      @media (max-width: 1024px) {
+        .gallery_column a {
+          flex: 1 1 250px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .gallery_column {
+          gap: 10px;
+          padding: 10px;
+        }
+
+        .gallery_column a {
+          flex: 1 1 100%;
+          min-height: 200px;
+        }
+      }
+
+      /* Estilos da seção Sobre Nós - otimizados */
+      .sobre_nos {
+        padding: 80px 0;
+        position: relative;
+      }
+
+      .sobre_nos h2 {
+        font-family: 'BS', serif;
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+        text-align: center;
+        margin-bottom: 60px;
+        color: #3a2e26;
+      }
+
+      .persons {
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+      }
+
+      .person_card {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+      }
+
+      .person_img {
+        flex: 1;
+        min-width: 350px;
+        height: 450px;
+        overflow: hidden;
+      }
+
+      .person_img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .person_text {
+        flex: 1;
+        padding: 40px;
+      }
+
+      /* Media queries para Sobre Nós */
+      @media (max-width: 992px) {
+        .person_card {
+          flex-direction: column;
+        }
+
+        .person_img {
+          min-width: 100%;
+          height: 350px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .sobre_nos {
+          padding: 60px 0;
+        }
+
+        .sobre_nos h2 {
+          font-size: 2rem;
+        }
+
+        .person_img {
+          height: 300px;
+        }
+      }
+    </style>
+    <!-- Título otimizado para SEO -->
+    <title>Abitare - Arquitetura e Design de Interiores</title>
+    <!-- Pré-conexão para fontes externas -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+
+  <body id="home">
+    <!-- HEADER otimizado para acessibilidade -->
+    <header id="header" class="header_bg" role="banner">
+      <div class="header">
+        <div class="box">
+          <div class="ur_pos container">
+            <a class="logo" href="./index.html" aria-label="Página inicial">
+              <img
+                class="filter_svg"
+                src="./img/logo/LOGO-ABITARE-SVG.svg"
+                alt="Abitare Logo"
+                width="150"
+                height="50"
+              />
+            </a>
+            <button
+              class="mobile_nav_toggle filter_svg"
+              aria-controls="header_menu_items"
+              aria-expanded="false"
+              aria-label="Menu mobile"
+            >
+              <span class="sr-only">Menu</span>
+            </button>
+            <nav class="header_menu" aria-label="Navegação principal">
+              <ul
+                class="header_menu_items color_a font-1-m"
+                data-visible="false"
+                id="header_menu_items"
+              >
+                <li class="active home">
+                  <a href="./index.html" class="hover">Home</a>
+                </li>
+                <li class="sobre">
+                  <a href="./html/sobre.html" class="hover">Sobre Nós</a>
+                </li>
+                <li class="projetos">
+                  <a href="./html/projetos.html" class="hover">Projetos</a>
+                </li>
+                <li class="contatos">
+                  <a href="./html/contatos.html" class="hover">Contatos</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- BANNER otimizado -->
+    <div id="banner" class="banner_fixed" aria-hidden="true">
+      <div class="banner_container">
+        <!-- Imagem de banner deve ser adicionada via CSS para melhor performance -->
+      </div>
+    </div>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main id="content" class="container" role="main">
+      <section
+        id="sobre_nos"
+        class="sobre_nos"
+        aria-labelledby="sobre-nos-title"
+      >
+        <h2 id="sobre-nos-title" class="title">Sobre Nós</h2>
+        <div class="persons">
+          <article class="person_card" aria-labelledby="person1-title">
+            <div class="person_img">
+              <img
+                src="./img/perfil/cinthia-e-deka-perfil.webp"
+                alt="Cinthia David e Andressa Rodrigues"
+                width="350"
+                height="450"
+                loading="lazy"
+              />
+            </div>
+            <div class="person_text">
+              <h3 id="person1-title">
+                Cinthia David<br />
+                & <br />
+                Andressa Rodrigues
+              </h3>
+              <p>
+                Profissionais dedicadas à criação de espaços funcionais e belos,
+                combinando expertise técnica com sensibilidade artística para
+                transformar ambientes conforme a visão e necessidades de cada
+                cliente.
+              </p>
+            </div>
+          </article>
+
+          <!-- <article class="person_card" aria-labelledby="person2-title">
+            <div class="person_img">
+              <img
+                src="./img/perfil/cinthia-e-deka-perfil.webp"
+                alt="Cinthia David e Andressa Rodrigues"
+                width="350"
+                height="450"
+                loading="lazy"
+              />
+            </div>
+            <div class="person_text">
+              <h3 id="person2-title">
+                Cinthia David<br />
+                & <br />
+                Andressa Rodrigues
+              </h3>
+              <p>
+                Com anos de experiência no mercado, nossa equipe se destaca pelo
+                atendimento personalizado e atenção aos detalhes, garantindo
+                projetos que harmonizam estética, funcionalidade e conforto.
+              </p>
+            </div>
+          </article> -->
+        </div>
+      </section>
+
+      <!-- GALERIA otimizada -->
+      <section id="gallery" class="gallery" aria-labelledby="galeria-title">
+        <h2 id="galeria-title" class="title">Nossos Projetos</h2>
+        <div class="gallery_row">
+          <div class="gallery_column">
+            <a href="./html/projetos.html" aria-label="Projeto 1">
+              <img
+                src="./img/gallery/20231108_174046.webp"
+                alt="Projeto residencial moderno"
+                width="400"
+                height="300"
+                loading="lazy"
+              />
+            </a>
+            <a href="./html/projetos.html" aria-label="Projeto 2">
+              <img
+                src="./img/gallery/20240201_113121.webp"
+                alt="Design de interiores contemporâneo"
+                width="400"
+                height="300"
+                loading="lazy"
+              />
+            </a>
+            <a href="./html/projetos.html" aria-label="Projeto 3">
+              <img
+                src="./img/gallery/20240506_162907-ANIMATION.gif"
+                alt="Animação de projeto arquitetônico"
+                width="400"
+                height="300"
+                loading="lazy"
+              />
+            </a>
+            <a href="./html/projetos.html" aria-label="Projeto 4">
+              <img
+                src="./img/gallery/20240201_114944.webp"
+                alt="Ambiente decorado com plantas"
+                width="400"
+                height="300"
+                loading="lazy"
+              />
+            </a>
+            <a href="./html/projetos.html" aria-label="Projeto 5">
+              <img
+                src="./img/gallery/20240201_175919.webp"
+                alt="Sala de estar integrada"
+                width="400"
+                height="300"
+                loading="lazy"
+              />
+            </a>
+            <a href="./html/projetos.html" aria-label="Projeto 6">
+              <img
+                src="./img/gallery/20240506_160625-ANIMATION.gif"
+                alt="Visualização 3D de projeto"
+                width="400"
+                height="300"
+                loading="lazy"
+              />
+            </a>
+            <a href="./html/projetos.html" aria-label="Projeto 7">
+              <img
+                src="./img/gallery/20240506_170503.webp"
+                alt="Detalhe de marcenaria"
+                width="400"
+                height="300"
+                loading="lazy"
+              />
+            </a>
+            <a href="./html/projetos.html" aria-label="Projeto 8">
+              <img
+                src="./img/gallery/Estante.webp"
+                alt="Estante de design personalizado"
+                width="400"
+                height="300"
+                loading="lazy"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER otimizado -->
+    <footer id="footer" class="footer" role="contentinfo">
+      <div class="footer_content container">
+        <nav class="mapa_footer" aria-label="Navegação secundária">
+          <ul class="mapa_footer_items">
+            <li class="active home">
+              <a href="#header" class="map_home hover">Home</a>
+            </li>
+            <li class="sobre">
+              <a href="./html/sobre.html" class="map_sobre hover">Sobre Nós</a>
+            </li>
+            <li class="projetos">
+              <a href="./html/projetos.html" class="map_projetos hover"
+                >Projetos</a
+              >
+            </li>
+            <li class="contatos">
+              <a href="./html/contatos.html" class="map_contatos hover"
+                >Contatos</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <div>
+          <p class="footer_direitos font-2-m cor-p6">
+            Abitare © <span id="current-year"></span> Todos os direitos
+            reservados.
+          </p>
+        </div>
+
+        <div class="logo_redes">
+          <a
+            href="https://www.instagram.com/abitare.arq"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+            <img
+              src="./img/footer/redes/instagram.svg"
+              alt="Instagram"
+              width="24"
+              height="24"
+              loading="lazy"
+            />
+          </a>
+          <a
+            href="https://www.pinterest.com/abitarearq"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Pinterest"
+          >
+            <img
+              src="./img/footer/redes/pinterest.svg"
+              alt="Pinterest"
+              width="24"
+              height="24"
+              loading="lazy"
+            />
+          </a>
+          <a
+            href="https://wa.me/5511984073541?text=Olá,%20gostaria%20de%20mais%20informações!"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp"
+          >
+            <img
+              src="./img/footer/redes/whatsapp.svg"
+              alt="WhatsApp"
+              width="24"
+              height="24"
+              loading="lazy"
+            />
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Script otimizado com defer -->
+    <script src="./js/scriptnav.js" defer></script>
+
+    <!-- Scripts inline otimizados -->
+    <script>
+      // Script de otimização da galeria
+      document.addEventListener('DOMContentLoaded', function () {
+        // Atualizar ano do footer
+        document.getElementById('current-year').textContent =
+          new Date().getFullYear();
+
+        // Otimização da galeria
+        const galleryItems = document.querySelectorAll('.gallery_column a');
+
+        // Intersection Observer para lazy loading
+        if ('IntersectionObserver' in window) {
+          const lazyImageObserver = new IntersectionObserver(function (
+            entries,
+          ) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                const lazyImage = entry.target;
+                lazyImage.style.transition = 'transform 0.5s ease';
+                lazyImageObserver.unobserve(lazyImage);
+              }
+            });
+          });
+
+          galleryItems.forEach(function (item) {
+            lazyImageObserver.observe(item);
+          });
+        }
+
+        // Eventos de hover otimizados
+        galleryItems.forEach(function (item) {
+          item.addEventListener('mouseenter', function () {
+            this.style.zIndex = '10';
+            this.style.transition =
+              'flex 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28)';
+          });
+
+          item.addEventListener('mouseleave', function () {
+            this.style.zIndex = '1';
+            this.style.transition = 'flex 0.3s ease';
+          });
+        });
+
+        // Pré-carregar hover states
+        requestIdleCallback(function () {
+          galleryItems.forEach(function (item) {
+            const img = item.querySelector('img');
+            if (img.complete) {
+              item.classList.add('loaded');
+            } else {
+              img.addEventListener('load', function () {
+                item.classList.add('loaded');
+              });
+            }
+          });
+        });
+      });
+
+      // Otimização para redimensionamento
+      let resizeTimeout;
+      window.addEventListener('resize', function () {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(function () {
+          const galleryItems = document.querySelectorAll('.gallery_column a');
+          galleryItems.forEach(function (item) {
+            item.style.transition = 'none';
+            void item.offsetWidth; // Forçar reflow
+            item.style.transition = '';
+          });
+        }, 100);
+      });
+    </script>
+
+    <!-- CSS não crítico carregado de forma assíncrona -->
+    <link
+      rel="stylesheet"
+      href="./css/non-critical.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript><link rel="stylesheet" href="./css/non-critical.css" /></noscript>
+  </body>
+</html>
